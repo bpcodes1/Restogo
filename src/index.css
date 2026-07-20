@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Palette + type sourced from style.txt (logo + Be Tech proposal analysis) */
+@theme {
+  --color-primary: #0c36c7;
+  --color-primary-dark: #0b3c8c;
+  --color-accent: #0b5cd7;
+  --color-bg-tint: #eaf1fc;
+  --color-bg-soft: #f4f7fb;
+  --color-border-soft: #e4ecf5;
+  --color-text-body: #2a3947;
+  --color-text-muted: #5a6b7a;
+  --color-heading: #000000;
+  --color-shadow-navy: #001367;
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --animate-marquee: marquee 70s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+body {
+  @apply bg-white text-text-body font-sans antialiased;
+}

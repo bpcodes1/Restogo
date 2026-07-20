@@ -1,0 +1,113 @@
+RESTOGO — BRAND & WEBSITE STYLE GUIDE
+Derived from: restogo_logo.webp + Restogo Proposal.pdf (Be Tech, July 12 2026)
+=================================================================
+
+1. LOGO COLORS (sampled from restogo_logo.webp, 2048x2048)
+-----------------------------------------------------------
+The logo is a flat royal-blue circular "R" mark on white, with a subtle
+dark bevel/shadow along one edge.
+
+  Logo Royal Blue (dominant fill)   #0C36C7   rgb(12, 54, 199)
+  Logo Shadow / Bevel Navy          #001367   rgb(0, 19, 103)
+  Background / Negative Space       #FFFFFF   rgb(255, 255, 255)
+
+Note: the logo blue is more saturated/violet-leaning than the blues used
+in the proposal document (below). Treat #0C36C7 as the true brand primary.
+
+
+2. PROPOSAL DOCUMENT PALETTE (sampled from Restogo Proposal.pdf)
+-----------------------------------------------------------
+This is the "Be Tech" proposal template palette — a clean navy/blue
+corporate look. Useful as a secondary reference / proof of a palette
+that already reads well for this industry.
+
+  Deep Navy (headings, dark banners, price/total text)
+      #0B3C8C   rgb(11, 60, 140)
+
+  Bright Accent Blue (section accent bars, sub-headings, table header bg)
+      #0B5CD7   rgb(11, 92, 215)
+
+  Light Blue Tint (section header backgrounds, total-row background)
+      #EAF1FC   rgb(234, 241, 252)
+
+  Pale Gray-Blue Tint (info/callout box backgrounds — Timeline, Payment,
+  Client Provides)
+      #F4F7FB   rgb(244, 247, 251)
+
+  Border / Divider (thin box outlines)
+      #E4ECF5   rgb(228, 236, 245)
+
+  Body Text (paragraphs)
+      #2A3947   rgb(42, 57, 71)
+
+  Muted / Secondary Text (captions, footnotes, "Includes:" lines)
+      #5A6B7A   rgb(90, 107, 122)
+
+  Page Background
+      #FFFFFF   rgb(255, 255, 255)
+
+
+3. RECOMMENDED UNIFIED WEB PALETTE
+-----------------------------------------------------------
+Reconciling the logo's royal blue with the proposal's navy/accent system
+into one usable theme:
+
+  --color-primary        #0C36C7   Logo royal blue — main brand color,
+                                    primary buttons, links, active states
+  --color-primary-dark    #0B3C8C   Deep navy — headers, footers, hero
+                                    overlays, "Total"/price emphasis
+  --color-accent          #0B5CD7   Bright blue — hover states, secondary
+                                    CTAs, section accent bars/icons
+  --color-bg-tint          #EAF1FC   Section background bands, highlighted
+                                    rows/cards
+  --color-bg-soft          #F4F7FB   Callout / info box backgrounds
+  --color-border            #E4ECF5   Card & divider borders
+  --color-text-body          #2A3947   Body copy
+  --color-text-muted          #5A6B7A   Secondary text, captions, labels
+  --color-bg                   #FFFFFF   Page background
+  --color-shadow-navy           #001367   Deep shadow accent (sparing use —
+                                          gradients, hover-darken, icon bevels)
+
+Suggested usage:
+  - Buttons/links/brand marks: --color-primary (#0C36C7)
+  - Nav bar, footer, dark section backgrounds: --color-primary-dark (#0B3C8C)
+  - Hover/active accents, small highlight bars: --color-accent (#0B5CD7)
+  - Section backgrounds to break up white space: --color-bg-tint (#EAF1FC)
+  - Cards, feature boxes, quote-form panel: --color-bg-soft (#F4F7FB)
+  - All body copy: --color-text-body (#2A3947)
+  - Labels, meta info, disclaimers: --color-text-muted (#5A6B7A)
+
+
+4. TYPOGRAPHY (from PDF font extraction)
+-----------------------------------------------------------
+  Proposal document font: Segoe UI (Regular + Bold)
+  - Headings use Segoe UI Bold (~18pt for title, ~10-11pt bold for
+    section labels)
+  - Body copy uses Segoe UI Regular (~9-10pt)
+
+Segoe UI is a Windows system font and not ideal for cross-platform web use.
+Recommended web-safe equivalents that match its clean, geometric-humanist
+feel:
+  - Primary: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif
+  - Alternative: "Source Sans 3" / "Open Sans"
+
+
+5. UI / LAYOUT STYLE NOTES (from proposal design)
+-----------------------------------------------------------
+  - Bold dark-navy banners used for callouts ("Next Steps", intro note) —
+    white text on #0B3C8C, generous padding, slightly rounded corners.
+  - Section headers use a thin bright-blue left accent bar (#0B5CD7)
+    next to bold navy heading text, on a light blue tint background
+    (#EAF1FC) — a "chip"/band style rather than plain underlines.
+  - Info boxes (Timeline, Payment, Client Provides) use a very pale
+    blue-gray fill (#F4F7FB) with a thin light border (#E4ECF5) and
+    rounded corners — subtle, not high-contrast.
+  - Pricing table: header row in bright accent blue (#0B5CD7) with white
+    text; total row emphasized with light blue tint bg + bold navy text.
+  - Overall feel: clean, corporate, trustworthy — lots of white space,
+    blue-on-white contrast, minimal color palette (navy + one accent blue
+    + light tints), no gradients or heavy shadows.
+
+This mirrors a B2B/industrial-supply site aesthetic (per the competitor
+references Karat Packaging & Monvic) — professional and utilitarian
+rather than playful.
