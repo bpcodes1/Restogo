@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, type NavLinkRenderProps } from 'react-router-dom';
 import logo from '../../assets/restogo-logo.webp';
 import Button from '../ui/Button';
 
@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { to: '/contact', label: 'Contact' },
 ];
 
-const linkClasses = ({ isActive }) =>
+const linkClasses = ({ isActive }: NavLinkRenderProps) =>
   `text-sm font-semibold transition-colors ${
     isActive ? 'text-primary' : 'text-heading hover:text-primary'
   }`;
@@ -58,7 +58,7 @@ export default function Navbar() {
             <NavLink
               key={link.to}
               to={link.to}
-              className={({ isActive }) =>
+              className={({ isActive }: NavLinkRenderProps) =>
                 `rounded-md px-3 py-2 text-sm font-semibold ${
                   isActive ? 'bg-bg-tint text-primary' : 'text-heading'
                 }`

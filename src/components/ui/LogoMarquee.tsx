@@ -1,8 +1,17 @@
-const PLACEHOLDER_LOGOS = Array.from({ length: 6 }, (_, i) => ({
+export interface Logo {
+  name: string;
+  src?: string;
+}
+
+interface LogoMarqueeProps {
+  logos?: Logo[];
+}
+
+const PLACEHOLDER_LOGOS: Logo[] = Array.from({ length: 6 }, (_, i) => ({
   name: `Partner ${i + 1}`,
 }));
 
-export default function LogoMarquee({ logos = PLACEHOLDER_LOGOS }) {
+export default function LogoMarquee({ logos = PLACEHOLDER_LOGOS }: LogoMarqueeProps) {
   const track = [...logos, ...logos];
 
   return (

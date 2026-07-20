@@ -5,7 +5,7 @@ packaging: cups, containers, boxes, and disposable cutlery.
 
 ## Stack
 
-- React + Vite
+- React + TypeScript + Vite
 - React Router
 - Tailwind CSS v4
 

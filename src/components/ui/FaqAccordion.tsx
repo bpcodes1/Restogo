@@ -1,7 +1,16 @@
 import { useState } from 'react';
 
-export default function FaqAccordion({ items }) {
-  const [openIndex, setOpenIndex] = useState(null);
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface FaqAccordionProps {
+  items: FaqItem[];
+}
+
+export default function FaqAccordion({ items }: FaqAccordionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <div className="divide-y divide-border-soft rounded-xl border border-border-soft bg-white">

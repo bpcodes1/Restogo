@@ -1,4 +1,13 @@
-export default function Card({ icon, title, children, className = '' }) {
+import type { ReactNode } from 'react';
+
+interface CardProps {
+  icon?: ReactNode;
+  title?: string;
+  children: ReactNode;
+  className?: string;
+}
+
+export default function Card({ icon, title, children, className = '' }: CardProps) {
   return (
     <div
       className={`rounded-xl border border-border-soft bg-bg-soft p-6 shadow-sm ${className}`}

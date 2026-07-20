@@ -1,9 +1,16 @@
+interface SectionHeadingProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: 'center' | 'left';
+}
+
 export default function SectionHeading({
   eyebrow,
   title,
   description,
   align = 'center',
-}) {
+}: SectionHeadingProps) {
   const alignment = align === 'center' ? 'text-center mx-auto' : 'text-left';
 
   return (

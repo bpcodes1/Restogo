@@ -4,9 +4,24 @@ export const CORE_STATE_FIPS = ['53', '41', '16']; // Washington, Oregon, Idaho
 export const NEIGHBOR_STATE_FIPS = ['06', '32', '30', '49', '56']; // CA, NV, MT, UT, WY
 export const MAP_STATE_FIPS = [...CORE_STATE_FIPS, ...NEIGHBOR_STATE_FIPS];
 
+interface LabelOffset {
+  dx: number;
+  dy: number;
+  textAnchor: 'start' | 'middle' | 'end';
+}
+
+export interface City {
+  name: string;
+  state: string;
+  coordinates: [number, number];
+  isHQ?: boolean;
+  services?: string[];
+  labelOffset: LabelOffset;
+}
+
 // Data-driven city list — add a city by appending an entry here.
 // labelOffset controls where the text sits relative to the pin so labels don't collide.
-export const CITIES = [
+export const CITIES: City[] = [
   {
     name: 'Salem',
     state: 'OR',

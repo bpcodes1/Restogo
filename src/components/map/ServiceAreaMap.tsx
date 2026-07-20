@@ -19,7 +19,7 @@ const COLORS = {
 };
 
 // Normalize FIPS ids so "6" and "06" both match California, etc.
-const normalizeFips = (id) => String(id).padStart(2, '0');
+const normalizeFips = (id: string | number) => String(id).padStart(2, '0');
 const CORE_SET = new Set(CORE_STATE_FIPS);
 const VISIBLE_SET = new Set(MAP_STATE_FIPS);
 

@@ -1,4 +1,10 @@
-export default function PageHero({ eyebrow, title, description }) {
+interface PageHeroProps {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+}
+
+export default function PageHero({ eyebrow, title, description }: PageHeroProps) {
   return (
     <section className="bg-primary-dark px-6 py-20 text-center text-white">
       {eyebrow && (
