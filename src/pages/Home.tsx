@@ -1,5 +1,6 @@
 import { Head } from 'vite-react-ssg';
 import Button from '../components/ui/Button';
+import LogoMarquee from '../components/ui/LogoMarquee';
 import { APP_ANDROID, APP_IOS } from '../lib/app-links';
 import heroImg from '../assets/products/portfolio-home-RESTOGO-alm.webp';
 import containersImg from '../assets/products/16.webp';
@@ -149,13 +150,8 @@ export default function Home() {
           <p className="mx-auto mt-2 max-w-lg text-center text-text-muted">
             Food and beverage brands across the Northwest run their packaging through Restogo.
           </p>
-          <div className="mt-10 grid grid-cols-2 items-center gap-x-10 gap-y-8 sm:grid-cols-4 lg:grid-cols-7">
-            {BRANDS.map((b) => (
-              <img
-                key={b.name} src={b.src} alt={b.name} title={b.name}
-                className="mx-auto max-h-12 w-auto max-w-full object-contain"
-              />
-            ))}
+          <div className="mt-10">
+            <LogoMarquee logos={BRANDS} />
           </div>
         </div>
       </section>
