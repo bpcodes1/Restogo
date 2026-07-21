@@ -1,6 +1,6 @@
 import { Head } from 'vite-react-ssg';
 import PageHero from '../components/layout/PageHero';
-import raysLogo from '../assets/rays_logo.webp';
+import raysLogo from '../assets/rays_logo_color.webp';
 
 export default function About() {
   return (

@@ -8,7 +8,7 @@ import foilImg from '../assets/products/5.webp';
 import traysImg from '../assets/products/22.webp';
 import glovesImg from '../assets/products/portfolio-home-RTG-gt.webp';
 import cleanersImg from '../assets/products/portfolio-home-CLEANERS-1.webp';
-import raysLogo from '../assets/rays_logo.webp';
+import raysLogo from '../assets/rays_logo_color.webp';
 import aguasFrescas from '../assets/brands/aguas_frescas_de_mexico.png';
 import alpine from '../assets/brands/alpine.png';
 import cocaCola from '../assets/brands/coca_cola.png';
@@ -153,7 +153,7 @@ export default function Home() {
             {BRANDS.map((b) => (
               <img
                 key={b.name} src={b.src} alt={b.name} title={b.name}
-                className="mx-auto max-h-12 w-auto max-w-full object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                className="mx-auto max-h-12 w-auto max-w-full object-contain"
               />
             ))}
           </div>
