@@ -1,0 +1,35 @@
+/* Hallmark · macrostructure: Bento Grid · tone: utilitarian-established · anchor hue: brand royal blue
+ * theme: studied-DNA (source: https://karatpackaging.com — apparatus only, craft rejected)
+ * paper #FFFFFF · accent #0C36C7 (BRAND-LOCKED hex, see CLAUDE.md — exactness beats OKLCH here)
+ * display: Archivo · body: Inter · label: IBM Plex Mono
+ * nav: N1b three-section · footer: Ft4 dense typographic · studied: yes · DNA-source: url
+ */
+@import "tailwindcss";
+
+@theme {
+  /* Brand-locked (sampled from restogo_logo.webp — do not restate as OKLCH, hex is the source of truth) */
+  --color-primary: #0c36c7;
+  --color-primary-dark: #0b3c8c;
+  --color-accent: #0b5cd7;
+  --color-shadow-navy: #001367;
+  /* Derived neutrals (style.txt proposal palette) */
+  --color-bg-tint: #eaf1fc;
+  --color-bg-soft: #f4f7fb;
+  --color-border-soft: #e4ecf5;
+  --color-text-body: #2a3947;
+  --color-text-muted: #5a6b7a;
+  --color-heading: #101828;
+
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html, body { overflow-x: clip; }
+body { @apply bg-white font-sans text-text-body antialiased; }
+h1, h2, h3, h4 { @apply font-display text-heading; overflow-wrap: anywhere; min-width: 0; }
+
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
