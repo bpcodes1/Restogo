@@ -1,8 +1,9 @@
 name: Deploy preview to GitHub Pages
 
+# Manual-only: run from the Actions tab when we WANT to publish this branch
+# to the repo's single Pages URL. Auto-deploy on push is off so pushes to
+# enrique never replace what's currently deployed (Bryan's main build).
 on:
-  push:
-    branches: [enrique]
   workflow_dispatch:
 
 permissions:
