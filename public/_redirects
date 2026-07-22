@@ -1,12 +1,8 @@
-# Cloudflare Pages applies _redirects rules even when a matching static
-# asset exists (redirects always win over asset resolution), so a bare
-# `/*  /index.html  200` would shadow every pre-rendered page and silently
-# serve Home content at /products, /service-areas, /about, and /contact.
-# Pin the 5 contractual routes to their real files first, then fall back.
-/products         /products.html        200
-/service-areas    /service-areas.html   200
-/about             /about.html          200
-/contact          /contact.html         200
-
-# Fallback for genuinely unmatched routes (typos, stale links from the old site).
-/*    /index.html   200
+# No rules on purpose. Cloudflare Pages already serves /about, /products,
+# /service-areas, and /contact from their matching .html files natively —
+# no rewrite needed. A `/* /index.html 200` fallback (or any rule whose
+# target is a bare `name.html`) loops on Cloudflare Pages: it rewrites the
+# request, then Cloudflare's own .html-extension-strip redirect sends the
+# browser back to the same clean path, which re-matches the rule forever.
+# Confirmed live: /about with a `/about /about.html 200` rule 308-looped.
+# Unmatched paths correctly fall through to Cloudflare's default 404.
