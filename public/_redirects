@@ -1,1 +1,12 @@
+# Cloudflare Pages applies _redirects rules even when a matching static
+# asset exists (redirects always win over asset resolution), so a bare
+# `/*  /index.html  200` would shadow every pre-rendered page and silently
+# serve Home content at /products, /service-areas, /about, and /contact.
+# Pin the 5 contractual routes to their real files first, then fall back.
+/products         /products.html        200
+/service-areas    /service-areas.html   200
+/about             /about.html          200
+/contact          /contact.html         200
+
+# Fallback for genuinely unmatched routes (typos, stale links from the old site).
 /*    /index.html   200
